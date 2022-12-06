@@ -9,6 +9,10 @@
     <StartupObject></StartupObject>
     <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
 	<IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+	<FileVersion>1.0.0</FileVersion>
+	<AssemblyVersion>1.0.0</AssemblyVersion>
+	<NeutralLanguage>nl</NeutralLanguage>
+	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
