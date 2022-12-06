@@ -1,0 +1,115 @@
+﻿<Window x:Class="CEFotoDownloader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CEFotoDownloader"
+        xmlns:p="clr-namespace:CEFotoDownloader.Properties"
+        mc:Ignorable="d"
+        Title="{x:Static p:Resources.StrAppTitle}" Height="450" Width="580"
+        ResizeMode="NoResize" FontFamily="Cambria">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="10" />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="10" />
+        </Grid.RowDefinitions>
+
+        <Image Grid.Column="1" Grid.Row="1" MaxHeight="50" Source="/Resources/CELogo.bmp"/>
+        
+        <Grid Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="4">
+
+            <TextBlock Text="{x:Static p:Resources.StrMainTitle}" FontSize="26"
+                       VerticalAlignment="Bottom" HorizontalAlignment="Left"/>
+
+            <!--
+            <ComboBox x:Name="LocaleSelector" Width="60" Height="30"
+                      VerticalAlignment="Bottom" HorizontalAlignment="Right" SelectionChanged="ComboBox_SelectionChanged">
+                <ComboBoxItem x:Name="Locale_NL" IsSelected="true">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Resources/netherlands.bmp" Width="35" Height="25"/>
+                    </StackPanel>
+                </ComboBoxItem>
+                <ComboBoxItem x:Name="Locale_EN" IsSelected="false">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="/Resources/united-kingdom.bmp" Width="35" Height="25"/>
+                    </StackPanel>
+                </ComboBoxItem>
+            </ComboBox>
+            -->
+        </Grid>
+        
+        <Border Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" BorderThickness="1" BorderBrush="Black" Margin="0,0,5,0">
+            <TextBlock x:Name="FileNameBlock" Text="{x:Static p:Resources.StrOpenedFile}" 
+                       VerticalAlignment="Center" HorizontalAlignment="Left"
+                       TextTrimming="CharacterEllipsis" Width="150"/>
+        </Border>
+        <Button x:Name="OpenFileBtn" Grid.Column="4" Grid.Row="3" Content="{x:Static p:Resources.StrOpenFileBtn}" Click="OpenFileBtn_Click" Margin="0,0,5,0" />
+
+        <DataGrid x:Name="DataGrid" Grid.Column="5" Grid.Row="3" Grid.RowSpan="3" 
+                  BorderBrush="Black" BorderThickness="1"
+                  IsManipulationEnabled="false" IsReadOnly="True"
+                  CanUserResizeColumns="false" CanUserResizeRows="false" CanUserReorderColumns="false"
+                  CanUserSortColumns="false"
+                  ItemsSource="{Binding articleList}" AutoGenerateColumns="false">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="{x:Static p:Resources.StrProductCode}" Binding="{Binding articleCode}" Width="*">
+
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="{x:Static p:Resources.StrStatus}" Binding="{Binding status}" Width="*">
+
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Border Grid.Column="1" Grid.Row="4" 
+                Grid.ColumnSpan="4" Grid.RowSpan="2"
+                BorderBrush="Black" BorderThickness="1"
+                Margin="0,5,5,0">
+
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{x:Static p:Resources.StrDownloadOptions}" FontWeight="Bold" FontSize="18" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox x:Name="ZipChk" VerticalAlignment="Center"/>
+                    <TextBlock Text="{x:Static p:Resources.StrZip}" FontSize="16"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox x:Name="ExtraChk" VerticalAlignment="Center"/>
+                    <TextBlock Text="{x:Static p:Resources.StrExtra}" FontSize="16"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <Button x:Name="AboutBtn"  HorizontalAlignment="Left"
+                Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="5"
+                Content="{x:Static p:Resources.StrAboutBtn}" Margin="0,5,0,0" Click="AboutBtn_Click"/>
+
+        <Button x:Name="DownloadBtn" HorizontalAlignment="Center"
+                Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="5"
+                Content="{x:Static p:Resources.StrDownloadBtn}" Margin="0,5,0,0"
+                Click="DownloadBtn_Click" />
+
+        <Button x:Name="DownloadFolderBtn" HorizontalAlignment="Right"
+                Grid.Column="1" Grid.Row="6" Grid.ColumnSpan="5"
+                Content="{x:Static p:Resources.StrOpenDownloadBtn}" Margin="0,5,0,0" Click="DownloadFolderBtn_Click" />
+    </Grid>
+</Window>

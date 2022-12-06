@@ -1,0 +1,67 @@
+﻿<Window x:Class="CEFotoDownloader.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CEFotoDownloader"
+        xmlns:p="clr-namespace:CEFotoDownloader.Properties"
+        mc:Ignorable="d"
+        Title="About" Height="400" Width="300"
+        ResizeMode="NoResize" FontFamily="Cambria" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <Image Grid.Column="1" Grid.Row="1" Height="50" Width="100"
+               Source="/Resources/CELogo.bmp" Margin="0,0,0,5"/>
+
+        <TextBlock Grid.Column="1" Grid.Row="2"
+                   Text="Clayre &amp; Eef" FontSize="14"
+                   HorizontalAlignment="Center" FontWeight="Bold"
+                   />
+        <TextBlock Grid.Column="1" Grid.Row="3"
+                   Text="De Giesel 46, Haelen" FontSize="14"
+                   HorizontalAlignment="Center"/>
+        <TextBlock Grid.Column="1" Grid.Row="4"
+                   Text="+31(0)475 571 722" FontSize="14"
+                   HorizontalAlignment="Center"/>
+        <TextBlock Grid.Column="1" Grid.Row="5"
+                   Text="info@clayre-eef.com" FontSize="14"
+                   HorizontalAlignment="Center"/>
+        <TextBlock Grid.Column="1" Grid.Row="6"
+                   FontSize="14" HorizontalAlignment="Center">
+                <Hyperlink NavigateUri="https://www.clayre-eef.com/" RequestNavigate="Hyperlink_RequestNavigate">
+                    clayre-eef.com
+                </Hyperlink>
+        </TextBlock>
+        <TextBlock Grid.Column="1" Grid.Row="7"
+                   Text="" FontSize="14"
+                   HorizontalAlignment="Center"/>
+        <TextBlock Grid.Column="1" Grid.Row="8"
+                   Text="Webfoto downloader" FontSize="14"
+                   HorizontalAlignment="Center" FontWeight="Bold"/>
+        <TextBlock Grid.Column="1" Grid.Row="9"
+                   Text="by Bas van Schoubroeck" FontSize="14"
+                   HorizontalAlignment="Center"/>
+        <TextBlock Grid.Column="1" Grid.Row="10"
+                   Text="Copyright © clayre-eef.com" FontSize="14"
+                   HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>
