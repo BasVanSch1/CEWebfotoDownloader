@@ -54,7 +54,7 @@ namespace CEFotoDownloader
 
             foreach (Article item in DownloadList)
             {
-                item.status = "Waiting...";
+                item.Status = "Waiting...";
                 await Download(item);
 
                 if (IncludeExtra)
@@ -78,7 +78,7 @@ namespace CEFotoDownloader
         {
             foreach (Article item in DownloadList)
             {
-                item.status = "";
+                item.Status = "";
             }
         }
 
@@ -86,9 +86,9 @@ namespace CEFotoDownloader
         {
             try
             {
-                item.status = "Downloading...";
+                item.Status = "Downloading...";
 
-                using var response = await httpClient.GetAsync($"https://images.clayre-eef.com/lowres/{item.articleCode}.jpg");
+                using var response = await httpClient.GetAsync($"https://images.clayre-eef.com/lowres/{item.ArticleCode}.jpg");
 
                 if (response.IsSuccessStatusCode)
                 {
@@ -105,16 +105,16 @@ namespace CEFotoDownloader
 
                     using (var stream = await response.Content.ReadAsStreamAsync())
                     {
-                        using FileStream fileStream = new($"{_targetDir}\\{item.articleCode}.jpg", FileMode.Create);
+                        using FileStream fileStream = new($"{_targetDir}\\{item.ArticleCode}.jpg", FileMode.Create);
                         await stream.CopyToAsync(fileStream);
                     }
 
-                    item.status = $"Success ({response.StatusCode})";
-                    Debug.WriteLine(item.articleCode + " : " + item.status);
+                    item.Status = $"Success ({response.StatusCode})";
+                    Debug.WriteLine(item.ArticleCode + " : " + item.Status);
                 }
                 else
                 {
-                    item.status = $"Failed ({response.StatusCode})"; ;
+                    item.Status = $"Failed ({response.StatusCode})"; ;
                 }
             }
             catch (HttpRequestException ex)
@@ -131,7 +131,7 @@ namespace CEFotoDownloader
                 List<Article> ExtraList = new();
                 for (int i = 1; i <= 10; i++)
                 {
-                    Article extraArticle = new(item.articleCode + $"_{i}");
+                    Article extraArticle = new(item.ArticleCode + $"_{i}");
                     ExtraList.Add(extraArticle);
                 }
 
@@ -144,18 +144,6 @@ namespace CEFotoDownloader
                 Debug.WriteLine("\nException Caught!");
                 Debug.WriteLine("Message: {0}", ex.Message);
             }
-        }
-
-        private static string getExecutingLoc()
-        {
-            string? _loc = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-
-            if (_loc != null)
-            {
-                return _loc;
-            }
-
-            return string.Empty;
         }
     }
 }

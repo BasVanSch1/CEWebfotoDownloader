@@ -70,10 +70,10 @@
                   ItemsSource="{Binding articleList}" AutoGenerateColumns="false">
 
             <DataGrid.Columns>
-                <DataGridTextColumn Header="{x:Static p:Resources.StrProductCode}" Binding="{Binding articleCode}" Width="*">
+                <DataGridTextColumn Header="{x:Static p:Resources.StrProductCode}" Binding="{Binding ArticleCode}" Width="*">
 
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="{x:Static p:Resources.StrStatus}" Binding="{Binding status}" Width="*">
+                <DataGridTextColumn Header="{x:Static p:Resources.StrStatus}" Binding="{Binding Status}" Width="*">
 
                 </DataGridTextColumn>
             </DataGrid.Columns>

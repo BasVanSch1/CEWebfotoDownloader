@@ -30,7 +30,7 @@ namespace CEFotoDownloader
                 foreach (string line in lines)
                 {
                     Article Article = new(line);
-                    Article.status = "Waiting...";
+                    Article.Status = "Waiting...";
 
                     if (!list.Contains(Article))
                     {

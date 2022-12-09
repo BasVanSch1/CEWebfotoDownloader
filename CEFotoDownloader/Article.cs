@@ -6,7 +6,7 @@ namespace CEFotoDownloader
 {
     class Article : INotifyPropertyChanged, IEquatable<Article>
     {
-        public String articleCode
+        public String ArticleCode
         {
             get
             {
@@ -22,7 +22,7 @@ namespace CEFotoDownloader
                 }
             }
         }
-        public String status
+        public String Status
         {
             get
             {
@@ -46,7 +46,7 @@ namespace CEFotoDownloader
 
         public Article(String articleCode)
         {
-            this.articleCode = articleCode;
+            this.ArticleCode = articleCode;
         }
 
         private void NotifyPropertyChanged([CallerMemberName] String propertyName = "")
@@ -61,7 +61,7 @@ namespace CEFotoDownloader
         {
             if (other != null && other.GetType() == typeof(Article))
             {
-                return this.articleCode == other.articleCode;
+                return this.ArticleCode == other.ArticleCode;
             }
 
             return false;

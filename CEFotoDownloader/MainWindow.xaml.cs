@@ -12,8 +12,6 @@ namespace CEFotoDownloader
     /// </summary>
     public partial class MainWindow : Window
     {
-        public string? UIlang { get; set; } = null;
-
         private ArticleReader? ArticleReaderInstance;
         private readonly string downloadDir;
 
