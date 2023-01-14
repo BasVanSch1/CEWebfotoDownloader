@@ -127,8 +127,29 @@
   <data name="StrAboutBtn" xml:space="preserve">
     <value>Over</value>
   </data>
+  <data name="StrAboutBy" xml:space="preserve">
+    <value>by Bas van Schoubroeck</value>
+  </data>
+  <data name="StrAboutTitle" xml:space="preserve">
+    <value>Over</value>
+  </data>
+  <data name="StrAdress" xml:space="preserve">
+    <value>De Giesel 46, Haelen</value>
+  </data>
   <data name="StrAppTitle" xml:space="preserve">
     <value>C&amp;E Webshop Foto Downloader</value>
+  </data>
+  <data name="StrCE" xml:space="preserve">
+    <value>Clayre &amp; Eef</value>
+  </data>
+  <data name="StrContactEmail" xml:space="preserve">
+    <value>info@clayre-eef.com</value>
+  </data>
+  <data name="StrContactPhone" xml:space="preserve">
+    <value>+31(0)475 571 722</value>
+  </data>
+  <data name="StrCopyright" xml:space="preserve">
+    <value>Copyright © clayre-eef.com</value>
   </data>
   <data name="StrDownloadBtn" xml:space="preserve">
     <value>Start Download</value>
@@ -162,6 +183,9 @@
   </data>
   <data name="StrStatus" xml:space="preserve">
     <value>Status</value>
+  </data>
+  <data name="StrVersion" xml:space="preserve">
+    <value>Version 1.0.1</value>
   </data>
   <data name="StrZip" xml:space="preserve">
     <value>Maak een zip bestand</value>

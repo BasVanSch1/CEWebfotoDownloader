@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:CEFotoDownloader"
         xmlns:p="clr-namespace:CEFotoDownloader.Properties"
         mc:Ignorable="d"
-        Title="About" Height="400" Width="300"
+        Title="{x:Static p:Resources.StrAboutTitle}" Height="400" Width="300"
         ResizeMode="NoResize" FontFamily="Cambria" WindowStartupLocation="CenterOwner">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -33,17 +33,17 @@
                Source="/Resources/CELogo.bmp" Margin="0,0,0,5"/>
 
         <TextBlock Grid.Column="1" Grid.Row="2"
-                   Text="Clayre &amp; Eef" FontSize="14"
+                   Text="{x:Static p:Resources.StrCE}" FontSize="14"
                    HorizontalAlignment="Center" FontWeight="Bold"
                    />
         <TextBlock Grid.Column="1" Grid.Row="3"
-                   Text="De Giesel 46, Haelen" FontSize="14"
+                   Text="{x:Static p:Resources.StrAdress}" FontSize="14"
                    HorizontalAlignment="Center"/>
         <TextBlock Grid.Column="1" Grid.Row="4"
-                   Text="+31(0)475 571 722" FontSize="14"
+                   Text="{x:Static p:Resources.StrContactPhone}" FontSize="14"
                    HorizontalAlignment="Center"/>
         <TextBlock Grid.Column="1" Grid.Row="5"
-                   Text="info@clayre-eef.com" FontSize="14"
+                   Text="{x:Static p:Resources.StrContactEmail}" FontSize="14"
                    HorizontalAlignment="Center"/>
         <TextBlock Grid.Column="1" Grid.Row="6"
                    FontSize="14" HorizontalAlignment="Center">
@@ -55,10 +55,10 @@
                    Text="" FontSize="14"
                    HorizontalAlignment="Center"/>
         <TextBlock Grid.Column="1" Grid.Row="8"
-                   Text="Webfoto downloader" FontSize="14"
+                   Text="{x:Static p:Resources.StrAppTitle}" FontSize="14"
                    HorizontalAlignment="Center" FontWeight="Bold"/>
         <TextBlock Grid.Column="1" Grid.Row="9"
-                   Text="by Bas van Schoubroeck" FontSize="14"
+                   Text="{x:Static p:Resources.StrAboutBy}" FontSize="14"
                    HorizontalAlignment="Center"/>
 
         <Grid Grid.Column="1" Grid.Row="10" VerticalAlignment="Bottom">
@@ -71,10 +71,10 @@
             </Grid.RowDefinitions>
 
             <TextBlock Grid.Column="1" Grid.Row="0"
-                   Text="Version 1.0.0" FontSize="14"
+                   Text="{x:Static p:Resources.StrVersion}" FontSize="14"
                    HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
             <TextBlock Grid.Column="1" Grid.Row="1"
-                   Text="Copyright © clayre-eef.com" FontSize="14"
+                   Text="{x:Static p:Resources.StrCopyright}" FontSize="14"
                    HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
         </Grid>
 

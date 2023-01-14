@@ -90,11 +90,74 @@ namespace CEFotoDownloader.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to by Bas van Schoubroeck.
+        /// </summary>
+        public static string StrAboutBy {
+            get {
+                return ResourceManager.GetString("StrAboutBy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Over.
+        /// </summary>
+        public static string StrAboutTitle {
+            get {
+                return ResourceManager.GetString("StrAboutTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to De Giesel 46, Haelen.
+        /// </summary>
+        public static string StrAdress {
+            get {
+                return ResourceManager.GetString("StrAdress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to C&amp;E Webshop Foto Downloader.
         /// </summary>
         public static string StrAppTitle {
             get {
                 return ResourceManager.GetString("StrAppTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clayre &amp; Eef.
+        /// </summary>
+        public static string StrCE {
+            get {
+                return ResourceManager.GetString("StrCE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to info@clayre-eef.com.
+        /// </summary>
+        public static string StrContactEmail {
+            get {
+                return ResourceManager.GetString("StrContactEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to +31(0)475 571 722.
+        /// </summary>
+        public static string StrContactPhone {
+            get {
+                return ResourceManager.GetString("StrContactPhone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copyright © clayre-eef.com.
+        /// </summary>
+        public static string StrCopyright {
+            get {
+                return ResourceManager.GetString("StrCopyright", resourceCulture);
             }
         }
         
@@ -194,6 +257,15 @@ namespace CEFotoDownloader.Properties {
         public static string StrStatus {
             get {
                 return ResourceManager.GetString("StrStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Version 1.0.1.
+        /// </summary>
+        public static string StrVersion {
+            get {
+                return ResourceManager.GetString("StrVersion", resourceCulture);
             }
         }
         
