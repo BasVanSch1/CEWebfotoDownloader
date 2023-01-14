@@ -98,6 +98,15 @@ namespace CEFotoDownloader.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Voeg toe.
+        /// </summary>
+        public static string StrAddArticle {
+            get {
+                return ResourceManager.GetString("StrAddArticle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to De Giesel 46, Haelen.
         /// </summary>
         public static string StrAdress {
@@ -188,6 +197,33 @@ namespace CEFotoDownloader.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Artikelbestand.
+        /// </summary>
+        public static string StrInputFile {
+            get {
+                return ResourceManager.GetString("StrInputFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Handmatig.
+        /// </summary>
+        public static string StrInputManual {
+            get {
+                return ResourceManager.GetString("StrInputManual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ingave Opties.
+        /// </summary>
+        public static string StrInputOptions {
+            get {
+                return ResourceManager.GetString("StrInputOptions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Lage kwaliteit.
         /// </summary>
         public static string StrLow {
@@ -202,6 +238,15 @@ namespace CEFotoDownloader.Properties {
         public static string StrMainTitle {
             get {
                 return ResourceManager.GetString("StrMainTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Vul hier je artikelcode in....
+        /// </summary>
+        public static string StrManualCode {
+            get {
+                return ResourceManager.GetString("StrManualCode", resourceCulture);
             }
         }
         
@@ -251,7 +296,7 @@ namespace CEFotoDownloader.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Version 1.0.1.
+        ///   Looks up a localized string similar to Version 1.1.0.
         /// </summary>
         public static string StrVersion {
             get {

@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace CEFotoDownloader
 {
@@ -86,5 +88,54 @@ namespace CEFotoDownloader
             };
             aboutWindow.Show();
         }
+
+        private void RFile_Checked(object sender, RoutedEventArgs e)
+        {
+            GridManualInput.Visibility = Visibility.Collapsed;
+            GridFileInput.Visibility = Visibility.Visible;
+        }
+
+        private void RManual_Checked(object sender, RoutedEventArgs e)
+        {
+            GridFileInput.Visibility = Visibility.Collapsed;
+            GridManualInput.Visibility = Visibility.Visible;
+        }
+
+        private void ArticleCodeBlock_GotFocus(object sender, RoutedEventArgs e)
+        {
+            ArticleCodeBlock.Text = "";
+        }
+
+        private void AddArticleBtn_Click(object sender, RoutedEventArgs e)
+        {
+            AddArticleManually();
+        }
+
+        private void FileNameBlock_KeyUp(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (e.Key == Key.Return || e.Key == Key.Enter)
+            {
+                AddArticleManually();
+            }
+        }
+
+        private void ArticleCodeBlock_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter || e.Key == Key.Return)
+            {
+                AddArticleManually();
+            }
+        }
+
+        private void AddArticleManually()
+        {
+            ArticleReaderInstance ??= new();
+            DataContext = ArticleReaderInstance;
+
+            Article article = new(ArticleCodeBlock.Text);
+            article.Status = "Waiting...";
+            ArticleReaderInstance.AddToCollection(article);
+        }
+
     }
 }

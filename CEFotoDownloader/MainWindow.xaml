@@ -26,6 +26,7 @@
             <RowDefinition Height="10" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
+
             <RowDefinition Height="*" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="10" />
@@ -53,15 +54,55 @@
                 </ComboBoxItem>
             </ComboBox>
             -->
+            
         </Grid>
-        
-        <Border Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" BorderThickness="1" BorderBrush="Black" Margin="0,0,5,0">
-            <TextBlock x:Name="FileNameBlock" Text="{x:Static p:Resources.StrOpenedFile}" 
+
+        <Grid Grid.Column="1" Grid.Row="3" 
+              Grid.ColumnSpan="4" x:Name="GridFileInput"
+              Visibility="Visible" Width="236">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            
+            <Border Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" BorderThickness="1" BorderBrush="Black" Margin="0,0,5,0">
+                <TextBlock x:Name="FileNameBlock" Text="{x:Static p:Resources.StrOpenedFile}" 
                        VerticalAlignment="Center" HorizontalAlignment="Left"
                        TextTrimming="CharacterEllipsis" Width="150"/>
-        </Border>
-        <Button x:Name="OpenFileBtn" Grid.Column="4" Grid.Row="3" Content="{x:Static p:Resources.StrOpenFileBtn}" Click="OpenFileBtn_Click" Margin="0,0,5,0" />
+            </Border>
+            <Button x:Name="OpenFileBtn" Grid.Column="3" Grid.Row="0" Content="{x:Static p:Resources.StrOpenFileBtn}" Click="OpenFileBtn_Click" Margin="0,0,5,0" />
 
+        </Grid>
+        
+        <Grid Grid.Column="1" Grid.Row="3" 
+              Grid.ColumnSpan="4" Name="GridManualInput"
+              Visibility="Collapsed" Width="236">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" BorderThickness="1" BorderBrush="Black" Margin="0,0,5,0">
+                <TextBox x:Name="ArticleCodeBlock"
+                       Text="{x:Static p:Resources.StrManualCode}"
+                       Width="175" GotFocus="ArticleCodeBlock_GotFocus" KeyUp="ArticleCodeBlock_KeyUp"/>
+            </Border>
+            <Button x:Name="AddArticleBtn" Grid.Column="3" Grid.Row="0" 
+                    Content="{x:Static p:Resources.StrAddArticle}" Margin="0,0,5,0" Click="AddArticleBtn_Click" />
+
+        </Grid>
         <DataGrid x:Name="DataGrid" Grid.Column="5" Grid.Row="3" Grid.RowSpan="3" 
                   BorderBrush="Black" BorderThickness="1"
                   IsManipulationEnabled="false" IsReadOnly="True"
@@ -78,13 +119,47 @@
                 </DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
+        
+        <!--
+        <Grid Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="4"
+              Margin="0,0,0,5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <RadioButton Grid.Column="0" Grid.Row="1"
+                         Name="RFile">
+                Artikel bestand
+            </RadioButton>
+            <RadioButton Grid.Column="1" Grid.Row="1"
+                         Name="RManual">
+                Handmatig
+            </RadioButton>
+        </Grid>
+        -->
 
         <Border Grid.Column="1" Grid.Row="4" 
                 Grid.ColumnSpan="4" Grid.RowSpan="2"
                 BorderBrush="Black" BorderThickness="1"
                 Margin="0,5,5,0">
-
             <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="{x:Static p:Resources.StrInputOptions}" FontWeight="Bold" FontSize="18"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <RadioButton Grid.Column="0" Grid.Row="1"
+                            Name="RFile" FontSize="16" IsChecked="True" 
+                            Checked="RFile_Checked" Content="{x:Static p:Resources.StrInputFile}"/>
+
+                    <RadioButton Grid.Column="1" Grid.Row="1"
+                            Name="RManual" FontSize="16" Checked="RManual_Checked"
+                            Content="{x:Static p:Resources.StrInputManual}"/>
+                </StackPanel>
+                
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="{x:Static p:Resources.StrDownloadOptions}" FontWeight="Bold" FontSize="18" />
                 </StackPanel>

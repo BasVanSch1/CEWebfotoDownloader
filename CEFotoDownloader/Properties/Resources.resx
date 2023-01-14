@@ -130,6 +130,9 @@
   <data name="StrAboutTitle" xml:space="preserve">
     <value>Over</value>
   </data>
+  <data name="StrAddArticle" xml:space="preserve">
+    <value>Voeg toe</value>
+  </data>
   <data name="StrAdress" xml:space="preserve">
     <value>De Giesel 46, Haelen</value>
   </data>
@@ -160,11 +163,23 @@
   <data name="StrHigh" xml:space="preserve">
     <value>Hoge kwaliteit</value>
   </data>
+  <data name="StrInputFile" xml:space="preserve">
+    <value>Artikelbestand</value>
+  </data>
+  <data name="StrInputManual" xml:space="preserve">
+    <value>Handmatig</value>
+  </data>
+  <data name="StrInputOptions" xml:space="preserve">
+    <value>Ingave Opties</value>
+  </data>
   <data name="StrLow" xml:space="preserve">
     <value>Lage kwaliteit</value>
   </data>
   <data name="StrMainTitle" xml:space="preserve">
     <value>Webshop foto downloader</value>
+  </data>
+  <data name="StrManualCode" xml:space="preserve">
+    <value>Vul hier je artikelcode in...</value>
   </data>
   <data name="StrOpenDownloadBtn" xml:space="preserve">
     <value>Open Downloads Folder</value>
@@ -182,7 +197,7 @@
     <value>Status</value>
   </data>
   <data name="StrVersion" xml:space="preserve">
-    <value>Version 1.0.1</value>
+    <value>Version 1.1.0</value>
   </data>
   <data name="StrZip" xml:space="preserve">
     <value>Maak een zip bestand</value>

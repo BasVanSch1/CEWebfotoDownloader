@@ -7,11 +7,26 @@ namespace CEFotoDownloader
 {
     class ArticleReader
     {
-        public ObservableCollection<Article> articleList { get; private set; }
+        public ObservableCollection<Article>? articleList { get; private set; }
+
+        public ArticleReader()
+        {
+            this.articleList = new();
+        }
 
         public ArticleReader(string source)
         {
             this.articleList = CreateCollection(source);
+        }
+
+        public void AddToCollection(Article article)
+        {
+            articleList ??= new();
+
+            if (!articleList.Contains(article))
+            {
+                articleList.Add(article);
+            }
         }
 
         private static ObservableCollection<Article> CreateCollection(string source)
@@ -50,5 +65,6 @@ namespace CEFotoDownloader
 
             return list;
         }
+
     }
 }
