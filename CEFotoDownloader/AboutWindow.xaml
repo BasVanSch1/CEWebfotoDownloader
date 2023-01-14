@@ -60,8 +60,23 @@
         <TextBlock Grid.Column="1" Grid.Row="9"
                    Text="by Bas van Schoubroeck" FontSize="14"
                    HorizontalAlignment="Center"/>
-        <TextBlock Grid.Column="1" Grid.Row="10"
+
+        <Grid Grid.Column="1" Grid.Row="10" VerticalAlignment="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Column="1" Grid.Row="0"
+                   Text="Version 1.0.0" FontSize="14"
+                   HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+            <TextBlock Grid.Column="1" Grid.Row="1"
                    Text="Copyright © clayre-eef.com" FontSize="14"
                    HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
+        </Grid>
+
     </Grid>
 </Window>
