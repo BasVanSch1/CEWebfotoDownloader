@@ -71,16 +71,6 @@ namespace CEFotoDownloader.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        public static byte[] netherlands {
-            get {
-                object obj = ResourceManager.GetObject("netherlands", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Over.
         /// </summary>
         public static string StrAboutBtn {
@@ -275,16 +265,6 @@ namespace CEFotoDownloader.Properties {
         public static string StrZip {
             get {
                 return ResourceManager.GetString("StrZip", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Byte[].
-        /// </summary>
-        public static byte[] united_kingdom {
-            get {
-                object obj = ResourceManager.GetObject("united_kingdom", resourceCulture);
-                return ((byte[])(obj));
             }
         }
     }

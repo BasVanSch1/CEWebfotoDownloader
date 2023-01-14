@@ -121,9 +121,6 @@
   <data name="CELogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\celogo.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="netherlands" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\netherlands.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="StrAboutBtn" xml:space="preserve">
     <value>Over</value>
   </data>
@@ -189,8 +186,5 @@
   </data>
   <data name="StrZip" xml:space="preserve">
     <value>Maak een zip bestand</value>
-  </data>
-  <data name="united_kingdom" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\united-kingdom.bmp;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>
